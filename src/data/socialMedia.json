@@ -2,21 +2,21 @@
   {
     "id": 0,
     "name": "github",
-    "url": "https://github.com/AbdaliDahir"
+    "url": "https://github.com/davidkroell"
   },
   {
     "id": 1,
     "name": "linkedin",
-    "url": "https://www.linkedin.com/in/abdelali-dahir-0b5344111/"
+    "url": "https://www.linkedin.com/in/david-kr%C3%B6ll-b29865171/"
   },
   {
     "id": 2,
-    "name": "twitter",
-    "url": "https://twitter.com/AbdaliDahir"
+    "name": "dev",
+    "url": "https://dev.to/davidkroell"
   },
   {
     "id": 3,
     "name": "instagram",
-    "url": "https://www.instagram.com/"
+    "url": "https://www.instagram.com/david1kroell"
   }
 ]

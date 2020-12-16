@@ -1,9 +1,16 @@
   
 export default {
-  primary: "#ff2d2d",
-  inverse: "#fff",
+  // primary: "#ff652f",
+  // inverse: "#ffe400",
+  // // colors
+  // darkGrey: "#747474",
+  // black: "#000",
+
+  primary: "#0074e1",
+  inverse: "#f79e02",
   // colors
-  darkGrey: "#333447",
+  darkGrey: "#747474",
+  lightGrey: "#ababab",
   black: "#000",
 
   // grid

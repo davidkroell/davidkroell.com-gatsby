@@ -1,10 +1,10 @@
 module.exports = {
-  SiteTitle: 'Abdelali',
+  SiteTitle: 'David Kröll',
   Sitelogo: '#',
   SiteLogoText: 'Abdelali',
-  SiteAuthor: 'Abdelali Dahir',
-  SiteDescription: 'Front End Developer',
-  defaultDescription: 'Software engineer!', 
+  SiteAuthor: 'David Kröll',
+  SiteDescription: 'Software Engineer',
+  defaultDescription: 'Tech enthusiast', 
   githubApiQuery: `query ($number_of_repos: Int!) {
     viewer {
       name
@@ -42,9 +42,9 @@ module.exports = {
     number_of_repos: 12,
   }, 
   SiteSocialLinks: {
-    twitter: 'https://twitter.com/AbdaliDahir',
-    github: 'https://github.com/AbdaliDahir',
-    linkedin: 'https://www.linkedin.com/in/abdelali-dahir-0b5344111/',
+    instagram: 'https://github.com/davidkroell',
+    linkedin: 'https://www.linkedin.com/in/david-kr%C3%B6ll-b29865171/',
+    dev: 'https://dev.to/davidkroell'
   },
   SiteAddress: {
     city: 'Casablanca',
@@ -54,7 +54,6 @@ module.exports = {
   },
   SiteContact: {
     email: 'abdali.dahir@gmail.com',
-    phone: 'phone number',
   },
-  SiteCopyright: '2020',
+  SiteCopyright: new Date().getFullYear(),
 };

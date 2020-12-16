@@ -4,7 +4,6 @@ import colors from "../../../data/variables";
 export const ButtonDefault = styled.a`
   cursor: pointer;
   margin: 10% 0%;
-  font-family: "GT-Walsheim-Pro-Medium";
   font-size: inherit;
   text-align: center;
   letter-spacing: 3px;
@@ -44,7 +43,6 @@ export const ReadMore = styled.span`
   font-size: 1rem;
   text-transform: inherit;
   letter-spacing: .7px;
-  font-family: "GT-Walsheim-Pro-Medium";
   &:hover {
     color: ${colors.primary};
   }
@@ -59,7 +57,6 @@ export const ResumeButton = styled.a`
   color: #000;
   font-size: 1rem;
   letter-spacing: 2px;
-  font-family: "GT-Walsheim-Pro-Medium";
   border: 5px solid #e8e7e7;
   display: block;
   margin: 6rem 0 2rem 0;

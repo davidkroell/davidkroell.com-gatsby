@@ -16,6 +16,5 @@ export const Tag = styled.a`
   &.active {
     background: ${variables.primary};
     color: ${variables.inverse};
-    font-family: "GT-Walsheim-Pro-Bold";
   }
 `

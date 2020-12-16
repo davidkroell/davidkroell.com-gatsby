@@ -3,7 +3,6 @@ import variables from '../../../data/variables';
 
 export const Intro = styled.div`
   padding: 8rem 0 4rem 0;
-  font-family: "GT-Walsheim-Pro-Regular";
 `;
 export const HeaderIntro = styled.header`
   display: grid;
@@ -13,7 +12,6 @@ export const HeaderIntro = styled.header`
   margin-bottom: 6rem;
 `
 export const Title = styled.h1`
-  font-family: "GT-Walsheim-Pro-Bold";
   font-size: 2rem;
   text-transform: capitalize;
   @media(max-width: ${variables.breakpointPhone}) {
@@ -23,7 +21,6 @@ export const Title = styled.h1`
 export const SubTitle = styled.h3`
   font-size: 2rem;
   text-transform: capitalize;
-  font-family: "GT-Walsheim-Pro-Bold";
   text-decoration: underline;
 `
 export const Text = styled.p`
@@ -83,19 +80,19 @@ export const WorkPost = styled.article`
         box-shadow: 0 17px 56px rgba(125,127,129,.17);
       }
       > a > div {
-        transition: all 800ms ease-in-out;
+        overflow:hidden;
+        transition: all 250ms ease-in-out;
       }
     }
   }
   &:hover {
     cursor: pointer;
     > div.media > .image-wrapper > a > div {
-      transform: scale(1.2) rotate(8deg);
+      transform: scale(1.05)
     }
   }
 `
 export const Category = styled.span`
-  font-family: "GT-Walsheim-Pro-Bold";
   color: ${variables.primary};
   text-transform: uppercase;
   letter-spacing: .05em;

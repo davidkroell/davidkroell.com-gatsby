@@ -5,7 +5,6 @@ export const NavbarLogo = styled.div`
   a {
     color: ${variables.black};
     font-size: 2.3rem;
-    font-family: "GT-Walsheim-Pro-Bold";
   }
   @media(max-width: ${variables.breakpointPhone}) {
     display: none
@@ -26,7 +25,7 @@ export const NavbarElement = styled.div`
 export const NavbarList = styled.ul`
   padding-left: 0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   list-style: none;
   > li a {
     font-size: 1.2rem;

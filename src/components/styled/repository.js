@@ -45,7 +45,6 @@ export const Title = styled.h2`
   margin-top: 0;
   font-size: 1.4rem;
   text-transform: capitalize;
-  font-family: "GT-Walsheim-Pro-Bold";
   @media(max-width: ${variables.breakpointPhone}) {
     font-size: 1rem;
   }
@@ -69,7 +68,6 @@ export const FooterItem = styled.span`
   margin-bottom: 1rem;
   font-size: .9rem;
   color: #242525;
-  font-family: "GT-Walsheim-Pro-Medium";
   vertical-align: middle;
   display: inline-block;
   > * {

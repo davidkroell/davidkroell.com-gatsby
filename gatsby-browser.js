@@ -1,7 +1,6 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+// custom typefaces
+import "typeface-montserrat"
+import "typeface-poppins"
 
-// You can delete this file if you're not using it
+// code block highliting
+import "prismjs/themes/prism-okaidia.css"

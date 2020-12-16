@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import variables from '../../data/variables';
 
 export const Intro = styled.div`
   padding: 8rem 0 4rem 0;
@@ -8,13 +9,12 @@ export const Intro = styled.div`
 export const Title = styled.h1`
   font-size: 2rem;
   text-transform: capitalize;
-  font-family: "GT-Walsheim-Pro-Bold";
 `
 
 export const ArticlePost = styled.article`
   margin-bottom: 5rem;
   padding-bottom: 1rem;
-  max-width: 60rem;
+  max-width: 50rem;
   margin: auto;
   text-align: center;
   img[src$="imgresponsive"] {
@@ -24,17 +24,51 @@ export const ArticlePost = styled.article`
 export const SmallText = styled.small`
     font-size: .89rem;
     padding-right: 10px;
-    font-family: "GT-Walsheim-Pro-Regular";
     > span {
       padding-left: 5px;
     }
 `
-export const ArticleBody = styled.div `
-  margin-top: 5rem;
+
+export const ArticleBody = styled.div`
+  margin-top: 5rem;    
+  text-align: justify;
+
   p {
-    font-size: 1.5rem;
-    font-family: "GT-Walsheim-Pro-Medium";
+    font-size: 1.25rem;
   }
+
+  h1 {
+    font-size 2.4rem;
+    text-align: left;
+  }
+  h2 {
+    font-size 1.7rem;
+    text-align: left;
+  }  
+  h3 {
+    font-size 1.4rem;
+    text-align: left;
+  }
+  h4 {
+    font-size 1.2rem;
+    text-align: left;
+
+  }
+  blockquote {
+    border-left: 4px solid #7d8a97;
+    padding-left: 1.2rem;
+    color: ${variables.lightGrey}
+  }
+
+  hr {
+    margin: 1rem 20rem;
+    background-color: ${variables.lightGrey};
+    height: 4px;
+    border: none;
+    border-radius 1.5px;
+  }
+
+  
 `
 
 export const NaviagtionList = styled.ul`
@@ -44,8 +78,8 @@ export const NaviagtionList = styled.ul`
   grid-row-gap: 5rem;
   list-style: none;
   padding: 0;
-  border-top: 4px solid #ff2d2d;
-  border-bottom: 4px solid #ff2d2d;
+  border-top: 4px solid ${variables.inverse};
+  border-bottom: 4px solid ${variables.inverse};
 `
 export const NaviagtionLi = styled.li`
   padding: 2rem 0;
@@ -54,6 +88,5 @@ export const NaviagtionLi = styled.li`
   }
   a {
     font-size: 1.3rem;
-    font-family: "GT-Walsheim-Pro-Medium";
   }
 `
