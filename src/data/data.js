@@ -1,17 +1,15 @@
 module.exports = {
   SiteTitle: 'David Kröll',
   Sitelogo: '#',
-  SiteLogoText: 'Abdelali',
   SiteAuthor: 'David Kröll',
   SiteDescription: 'Software Engineer',
-  defaultDescription: 'Tech enthusiast', 
-  githubApiQuery: `query ($number_of_repos: Int!) {
+  githubApiQuery: `query ($numOfRepos: Int!) {
     viewer {
       name
       avatarUrl
       isHireable
       resourcePath
-      repositories(last: $number_of_repos, privacy: PUBLIC, orderBy: { field: STARGAZERS, direction:ASC } ) {
+      repositories(last: $numOfRepos, privacy: PUBLIC, orderBy: { field: STARGAZERS, direction:ASC } ) {
         nodes {
           name
           description
@@ -39,22 +37,41 @@ module.exports = {
     }
   }`,
   githubApiVariables: {
-    number_of_repos: 12,
-  }, 
-  SiteSocialLinks: {
-    instagram: 'https://github.com/davidkroell',
-    linkedin: 'https://www.linkedin.com/in/david-kr%C3%B6ll-b29865171/',
-    dev: 'https://dev.to/davidkroell'
+    numOfRepos: 12,
   },
   BlogEditRoot: 'https://github.com/davidkroell/gatsby-portfolio/tree/master/content/blogposts',
-  SiteAddress: {
-    city: 'Casablanca',
-    region: 'CurvaSud',
-    country: 'Morocco',
-    zipCode: 'ZipCode',
-  },
   SiteContact: {
-    email: 'abdali.dahir@gmail.com',
+    email: 'david.kroell@outlook.com',
   },
+  QuoteLines: [
+    {
+      Quote: "Without the possibility of death, adventure is not possible.",
+      Author: "Reinhold Messner"
+    },
+    {
+      Quote: "In some ways, programming is like painting.",
+      Author: "John Johnson"
+    }
+  ],
+
+  SocialMediaLinks: [
+    {
+      "name": "github",
+      "url": "https://github.com/davidkroell"
+    },
+    {
+      "name": "linkedin",
+      "url": "https://www.linkedin.com/in/david-kr%C3%B6ll-b29865171/"
+    },
+    {
+      "name": "dev",
+      "url": "https://dev.to/davidkroell"
+    },
+    {
+      "name": "instagram",
+      "url": "https://www.instagram.com/david1kroell"
+    }
+  ],
+
   SiteCopyright: new Date().getFullYear(),
 };

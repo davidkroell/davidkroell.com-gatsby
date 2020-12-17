@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import {AboutSection, Avatar, Title, Text, SubTitle} from './style';
-import {SectionIntro, ContainerLayout, ResumeButton} from "../common";
+import { AboutSection, Avatar, Title, Text, SubTitle } from './style';
+import { SectionIntro, ContainerLayout, ButtonDefault } from "../common";
 
 const About = () => {
   const data = useStaticQuery(graphql`
@@ -22,15 +22,22 @@ const About = () => {
           <AboutSection>
             <div>
               <Avatar fluid={data.placeholderImage.childImageSharp.fluid} alt="user photo" />
-              <SubTitle> Front End Developer</SubTitle>
-            </div> 
+              <SubTitle>Software Engineering</SubTitle>
+            </div>
             <div>
-              <Title> Hello, I’m AbdAli </Title>
-              <Text> I'm a digital Front End Developer hailing from <b className="text-primary lined-link">North Africa</b> living in Casablanca. </Text>
-              <Text> I love working with modern technologies, building and designing awesome projects. I prefer minimalistic & clean designs with strong user experience.</Text>
-              <Text> behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.
-              </Text>
-              <ResumeButton href="resume.pdf" target="_blank"> Download resume </ResumeButton>
+              <Title>Hello,</Title>
+              <Text>my name is <b>David</b> and I'm a software engineer based in Tyrol, Austria. Currently,
+                I'm working at Liebherr Appliances as .NET Developer.</Text>
+
+              <Text>I love working with modern technologies, architecting and designing high quality products with code.
+                I always strive for the best results by utilizing cutting-edge technologies.
+                Obviously, this requires much passion and involves a lot of willingness for self-paced learning.</Text>
+              
+              <Text>
+                Besides my tech background I enjoy beeing in the mountains - with skies in the winter and on my bike in the summer.
+                In addition I am curious about all kind of sciences (especially astrophysics).
+                I do in fact read a lot of books, but when I'm in a bar with friends I'll order Gin &amp; Tonic.
+              </Text> 
             </div>
           </AboutSection>
         </ContainerLayout>
@@ -38,6 +45,5 @@ const About = () => {
     </>
   )
 }
-
 
 export default About

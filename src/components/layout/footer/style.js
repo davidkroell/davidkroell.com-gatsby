@@ -3,7 +3,7 @@ import variables from '../../../data/variables';
 
 export const FooterStyle = styled.footer`
 	padding-top: 1rem;
-  padding-bottom: 8rem;
+  	padding-bottom: 8rem;
 	z-index: 0;
 	position: relative;
 	text-align: left;
@@ -18,6 +18,7 @@ export const FooterStyle = styled.footer`
 	}
 	.quote {
 		font-size: 4rem;
+		font-weight: 500;
 		line-height: 1.2;
 		color: ${variables.primary};
 		@media(max-width: ${variables.breakpointPhone}) {
@@ -26,18 +27,27 @@ export const FooterStyle = styled.footer`
 	}
 `;
 
-export const SubRight = styled.p`
+export const QuoteLine = styled.p`
 	font-size: 1rem;
 	line-height: 1.8;
-	letter-spacing:2px;
+	letter-spacing: 2px;
+	text-transform: capitalize;
+	font-weight: 500;
+`
+
+export const QuoteLineSmall = styled.p`
+	font-size: 0.75rem;
+	line-height: 1.8;
+	letter-spacing: 2px;
 	text-transform: capitalize;
 	margin-bottom: 20px;
-`	
+	margin-top: 0;
+`
+
 export const CopyRight = styled.p`
 	font-size: 11px;
 	line-height: 1.8;
-	letter-spacing:1px;
-	text-transform: capitalize;
+	letter-spacing: 1px;
 `
 export const FooterBody = styled.div`
 	display: grid;
@@ -64,7 +74,6 @@ export const MediaLink = styled.a`
 	padding-bottom: .5rem;
 	line-height: 1;
 	font-size: 1rem;
-  text-transform: capitalize;
-  color: ${variables.primary};
-	
+	text-transform: capitalize;
+	color: ${variables.primary};
 `

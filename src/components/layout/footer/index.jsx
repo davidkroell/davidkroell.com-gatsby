@@ -1,37 +1,39 @@
 import React from 'react';
-import socialMedia from "../../../data/socialMedia.json";
 import data from "./../../../data/data";
-import { FooterStyle, FooterBody, SubRight, CopyRight, MediaLink, FooterSocialMedia } from './style'
-import {ContainerLayout, ButtonDefault} from '../../common'
+import { FooterStyle, FooterBody, QuoteLine, QuoteLineSmall, CopyRight, MediaLink, FooterSocialMedia } from './style'
+import { ContainerLayout, ButtonDefault } from '../../common'
 
 const Footer = () => {
+	let displayedQuote = data.QuoteLines[Math.floor(Math.random() * data.QuoteLines.length)]
+
 	return (
 		<>
 			<FooterStyle>
 				<ContainerLayout>
 					<FooterBody>
 						<FooterSocialMedia>
-							{socialMedia.map(({ id, name, url }) => (
-								<li key={id}> 
+							{data.SocialMediaLinks.map(({ id, name, url }) => (
+								<li key={id}>
 									<MediaLink className="lined-link" href={url} target="_blank" rel="noopener noreferrer" aria-label={`follow us on ${name}`}>
 										{name}
-									</MediaLink> 
+									</MediaLink>
 								</li>
 							))}
 						</FooterSocialMedia>
 						<div>
-							<p className="text-primary quote"> Ready to take the next step and work together? </p>
-							<ButtonDefault href={`mailto:${data.SiteContact.email}`}> Contact me </ButtonDefault>
+							<p className="text-primary quote">Do you want to get in touch? Drop me a note.</p>
+							<ButtonDefault href={`mailto:${data.SiteContact.email}`}>Contact me</ButtonDefault>
 						</div>
 					</FooterBody>
 					<div className="box">
-						<SubRight> Good design doesn't date. Bad design does. </SubRight>
+						<QuoteLine>{displayedQuote.Quote}</QuoteLine>
+						<QuoteLineSmall>- {displayedQuote.Author}</QuoteLineSmall>
 						<CopyRight className="text-dark">
-							© 
-							<span> {new Date().getFullYear()}, Built with {` `} 
+							©
+							<span> {new Date().getFullYear()}, Built with {` `}
 								<a href="https://www.gatsbyjs.org">Gatsby</a>{" "}
-          		</span> 
-							Copyright 2020 by {data.SiteAuthor} </CopyRight>
+							</span>
+							(c) {new Date().getFullYear()} {data.SiteAuthor} </CopyRight>
 					</div>
 				</ContainerLayout>
 			</FooterStyle>
