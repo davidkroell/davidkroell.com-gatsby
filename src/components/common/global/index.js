@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 import variables from "../../../data/variables";
-import './fonts.css';
 
 export const GlobalStyle = createGlobalStyle`
   // normalize

@@ -46,6 +46,7 @@ module.exports = {
     linkedin: 'https://www.linkedin.com/in/david-kr%C3%B6ll-b29865171/',
     dev: 'https://dev.to/davidkroell'
   },
+  BlogEditRoot: 'https://github.com/davidkroell/gatsby-portfolio/tree/master/content/blogposts',
   SiteAddress: {
     city: 'Casablanca',
     region: 'CurvaSud',
