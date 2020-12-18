@@ -65,7 +65,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create blog posts pages.
   const posts = blogResult.data.blogGroup.edges
   const works = worksResult.data.allMarkdownRemark.edges
-  
+
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
@@ -85,14 +85,16 @@ exports.createPages = async ({ graphql, actions }) => {
     // Make tag pages
     categories.forEach(category => {
       createPage({
-        path: `/${_.kebabCase(category.fieldValue)}/`,
+        path: `/blog/categories/${_.kebabCase(category.fieldValue)}/`,
         component: categoriesTemplate,
         context: {
           category: category.fieldValue,
         },
       })
+    })
   })
-  })
+
+  
   works.forEach((work) => {
     createPage({
       path: work.node.fields.slug,
@@ -104,14 +106,17 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+
+  if (node.internal.type === `MarkdownRemark`
+    && node.fileAbsolutePath.includes("blogposts")) {
+
+    const slug = createFilePath({ node, getNode, basePath: `content/blogposts` })
     createNodeField({
       node,
       name: `slug`,
-      value,
+      value: `/blog${slug}`,
     })
   }
 }

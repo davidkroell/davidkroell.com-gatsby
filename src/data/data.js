@@ -40,9 +40,11 @@ module.exports = {
     numOfRepos: 12,
   },
   BlogEditRoot: 'https://github.com/davidkroell/gatsby-portfolio/tree/master/content/blogposts',
+
   SiteContact: {
     email: 'david.kroell@outlook.com',
   },
+
   QuoteLines: [
     {
       Quote: "Without the possibility of death, adventure is not possible.",
@@ -50,7 +52,8 @@ module.exports = {
     },
     {
       Quote: "In some ways, programming is like painting.",
-      Author: "John Johnson"
+      Author: "Andrew Hunt",
+      Source: "The Pragmatic Programmer"
     }
   ],
 
