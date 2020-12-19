@@ -23,7 +23,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `portfolio`,
+        name: `works`,
         path: `${__dirname}/content/works`,
       },
     },
@@ -74,7 +74,7 @@ module.exports = {
         token: process.env.GATSBY_GITHUB_API_TOKEN,
         graphQLQuery: data.githubApiQuery,
         variables: data.githubApiVariables,
-      },
+      }, 
     },
     // https://www.gatsbyjs.org/packages/gatsby-plugin-google-analytics/
     {

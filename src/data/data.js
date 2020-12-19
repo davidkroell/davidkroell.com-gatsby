@@ -40,6 +40,7 @@ module.exports = {
     numOfRepos: 12,
   },
   BlogEditRoot: 'https://github.com/davidkroell/gatsby-portfolio/tree/master/content/blogposts',
+  ViewSourceUrl: 'https://github.com/davidkroell/gatsby-portfolio/',
 
   SiteContact: {
     email: 'david.kroell@outlook.com',

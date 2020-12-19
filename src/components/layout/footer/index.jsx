@@ -13,7 +13,7 @@ const Footer = () => {
 					<FooterBody>
 						<FooterSocialMedia>
 							{data.SocialMediaLinks.map(({ id, name, url }) => (
-								<li key={id}>
+								<li >
 									<MediaLink className="lined-link" href={url} target="_blank" rel="noopener noreferrer" aria-label={`follow us on ${name}`}>
 										{name}
 									</MediaLink>
@@ -27,13 +27,13 @@ const Footer = () => {
 					</FooterBody>
 					<div className="box">
 						<QuoteLine>{displayedQuote.Quote}</QuoteLine>
-						<QuoteLineSmall>- {displayedQuote.Author}</QuoteLineSmall>
+						<QuoteLineSmall>- {displayedQuote.Author} {displayedQuote.Source != null ? ' in ' + displayedQuote.Source : ''}</QuoteLineSmall>
+
 						<CopyRight className="text-dark">
-							©
-							<span> {new Date().getFullYear()}, Built with {` `}
+							<span>Built with {` `}
 								<a href="https://www.gatsbyjs.org">Gatsby</a>{" "}
 							</span>
-							(c) {new Date().getFullYear()} {data.SiteAuthor} </CopyRight>
+							(c) {new Date().getFullYear()} {data.SiteAuthor} - <a href={data.ViewSourceUrl}> view source</a> </CopyRight>
 					</div>
 				</ContainerLayout>
 			</FooterStyle>

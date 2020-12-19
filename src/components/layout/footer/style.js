@@ -31,7 +31,6 @@ export const QuoteLine = styled.p`
 	font-size: 1rem;
 	line-height: 1.8;
 	letter-spacing: 2px;
-	text-transform: capitalize;
 	font-weight: 500;
 `
 
@@ -39,7 +38,6 @@ export const QuoteLineSmall = styled.p`
 	font-size: 0.75rem;
 	line-height: 1.8;
 	letter-spacing: 2px;
-	text-transform: capitalize;
 	margin-bottom: 20px;
 	margin-top: 0;
 `

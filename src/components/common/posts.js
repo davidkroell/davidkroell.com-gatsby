@@ -11,18 +11,19 @@ export const HeaderIntro = styled.header`
   justify-content: space-between;
   margin-bottom: 6rem;
 `
-export const Title = styled.h1`
+
+export const PostTitle = styled.h2`
   font-size: 2rem;
   text-transform: capitalize;
-  @media(max-width: ${variables.breakpointPhone}) {
-    font-size: 1.5rem;
-  }
 `
+
 export const SubTitle = styled.h3`
-  font-size: 2rem;
-  text-transform: capitalize;
-  text-decoration: underline;
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
 `
+
 export const Text = styled.p`
   font-size: .98rem;
   line-height: 2;

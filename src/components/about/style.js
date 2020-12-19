@@ -16,13 +16,7 @@ export const Avatar =styled(Img)`
   box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.15);
   width: 100%;
 `
-export const Title = styled.h1`
-  font-size: 3rem;
-  text-transform: capitalize;
-  @media(max-width: ${variables.breakpointPhone}) {
-    font-size: 2rem;
-  }
-`
+
 export const Text = styled.p`
   font-size: 1.2rem;
   line-height: 2;

@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import { Link, graphql } from "gatsby"
 import { Calendar, Clock } from 'react-feather'
 import Img from "gatsby-image"
-import { ContainerLayout, WorkPost, Intro, SubTitle, Title, Text, HeaderIntro, SubText, SmallText, UnderLink, ReadMore } from "../components/common"
+import { ContainerLayout, WorkPost, Intro, SubTitle,Title, PostTitle, Text, HeaderIntro, SubText, SmallText, UnderLink, ReadMore } from "../components/common"
 import CategoriesTags from '../components/CategoriesTags/categoriesTags';
 import kebabCase from "lodash/kebabCase"
 
@@ -18,12 +18,13 @@ const BlogIndex = ({ data }) => {
         <Intro>
           <ContainerLayout>
 
-            <SubTitle>
+            <Title>
               Articles
-            </SubTitle>
+            </Title>
             <HeaderIntro>
               <SubText>
-                Articles on front-end design engineering, focused on HTML, CSS, SVG, accessiblity, and everything in between, with practical tips from real projects. Included here are links to articles published on magazines.
+                Blog posts based on various engineering, development and IT topics. Most of the time focused on software engineering - with background information and practical tips from real projects.
+                All of them are published on my <a href="https://dev.to/davidkroell">dev.to</a> page, too.
               </SubText>
               <CategoriesTags />
             </HeaderIntro>
@@ -41,7 +42,7 @@ const BlogIndex = ({ data }) => {
                         </Link>
                       </div>
                       <SmallText>
-                        Image Credits :
+                        Image credits:
                         <UnderLink href={post.frontmatter.imageCredit} target="_blank" title="image credit">
                           {post.frontmatter.imageCredit}
                         </UnderLink>
@@ -53,23 +54,22 @@ const BlogIndex = ({ data }) => {
                         <SmallText>
                           <span className="align-middle">{post.frontmatter.categories.map((item, index) => (
                             <Link to={`/${kebabCase(item)}`} key={index}>
-                              <span className="align-middle text-primary text-underline">#{item}</span>
-                              {post.frontmatter.categories.length !== index + 1 ? <span className="align-middle text-primary"> , </span> : ""}
+                              <span className="align-middle text-primary text-underline">#{item} </span>
                             </Link>
                           ))} </span>
                         </SmallText>
-                        <Title>
+                        <PostTitle>
                           <Link className="text-primary" style={{ boxShadow: `none` }} to={post.fields.slug}>
                             {title}
                           </Link>
-                        </Title>
+                        </PostTitle>
                         <SmallText>
                           <Calendar className="align-middle text-primary" width="18" height="18" />
-                          <span className="align-middle">published: {post.frontmatter.date} </span>
+                          <span className="align-middle">{post.frontmatter.date}</span>
                         </SmallText>
                         <SmallText>
                           <Clock className="align-middle text-primary" width="18" height="18" />
-                          <span className="align-middle">read time: {post.frontmatter.time}m </span>
+                          <span className="align-middle">{post.frontmatter.time} min read</span>
                         </SmallText>
                       </header>
                       <Text
