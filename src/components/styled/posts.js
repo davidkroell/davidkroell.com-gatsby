@@ -78,9 +78,8 @@ export const NaviagtionList = styled.ul`
   grid-row-gap: 5rem;
   list-style: none;
   padding: 0;
-  border-top: 4px solid ${variables.inverse};
-  border-bottom: 4px solid ${variables.inverse};
 `
+
 export const NaviagtionLi = styled.li`
   padding: 2rem 0;
   &:last-child {
@@ -89,4 +88,10 @@ export const NaviagtionLi = styled.li`
   a {
     font-size: 1.3rem;
   }
+`
+
+export const BlogFooter = styled.nav`
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 4px solid ${variables.inverse};
 `

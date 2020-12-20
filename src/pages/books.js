@@ -25,7 +25,7 @@ const BookIndex = ({ data }) => {
   return (
     <>
       <Layout>
-        <SEO title="Books Home Page" />
+        <SEO title="Books" />
         <Intro>
           <ContainerLayout>
 
@@ -88,7 +88,7 @@ const BookIndex = ({ data }) => {
                           __html: book.recommendetFor
                         }} />
 
-                      <a href={book.link} target="_blank" >
+                      <a href={book.link} target="_blank" rel="noreferrer" >
                         <ReadMore className="lined-link"> get the book &#8594; </ReadMore>
                       </a>
 

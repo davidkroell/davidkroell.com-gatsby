@@ -3,10 +3,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Repository from "../components/works/github"
 import { graphql } from "gatsby"
-import {RepoGrid, RepoInfo, Avatar} from "../components/styled/repository"
-import {SectionIntro, ContainerLayout} from "../components/common";
+import { RepoGrid, RepoInfo, Avatar } from "../components/styled/repository"
+import { SectionIntro, ContainerLayout } from "../components/common";
 
-const RepositoryPage = ({data}) => { 
+const RepositoryPage = ({ data }) => {
   const {
     name,
     avatarUrl,
@@ -14,7 +14,7 @@ const RepositoryPage = ({data}) => {
   } = data.githubData.data.viewer
 
   return (
-    <Layout> 
+    <Layout>
       <SEO title="Github Repositories" />
       <ContainerLayout>
         <SectionIntro>
@@ -30,6 +30,7 @@ const RepositoryPage = ({data}) => {
     </Layout>
   )
 }
+
 export default RepositoryPage
 
 export const gitHubQuery = graphql`

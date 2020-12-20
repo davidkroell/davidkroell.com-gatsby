@@ -13,7 +13,7 @@ const Footer = () => {
 					<FooterBody>
 						<FooterSocialMedia>
 							{data.SocialMediaLinks.map(({ id, name, url }) => (
-								<li >
+								<li key={id} >
 									<MediaLink className="lined-link" href={url} target="_blank" rel="noopener noreferrer" aria-label={`follow us on ${name}`}>
 										{name}
 									</MediaLink>

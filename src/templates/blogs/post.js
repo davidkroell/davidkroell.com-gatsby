@@ -5,16 +5,16 @@ import SEO from "../../components/seo"
 import { Calendar, Clock } from 'react-feather'
 import baseData from "../../data/data"
 
-import {Intro, Title, ArticlePost, SmallText, ArticleBody, NaviagtionList, NaviagtionLi } from '../../components/styled/posts'
-import {ContainerLayout} from '../../components/common'
+import { Intro, Title, ArticlePost, SmallText, ArticleBody, NaviagtionList, NaviagtionLi, BlogFooter } from '../../components/styled/posts'
+import { ContainerLayout } from '../../components/common'
 
 
-const BlogPost = ({data, pageContext, location}) => {
+const BlogPost = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
 
-  post.editLink = baseData.BlogEditRoot + post.fields.slug
+  post.editLink = baseData.BlogEditRoot + post.fields.slug.substring(5)
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -23,29 +23,33 @@ const BlogPost = ({data, pageContext, location}) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <Intro >
-        <ContainerLayout> 
-            <div>
-              <ArticlePost>
-                <header>
-                  <Title>
-                      {post.frontmatter.title}
-                  </Title>
-                  <SmallText> 
-                    <Calendar className="align-left text-primary" width="18" height="18" /> 
-                    <span className="align-middle"> published: {post.frontmatter.date} </span>
-                  </SmallText>
-                  <SmallText> 
-                    <Clock className="align-middle text-primary" width="18" height="18" /> 
-                    <span className="align-middle"> read time: {post.frontmatter.time}m </span>
-                  </SmallText>
-                </header>
-                
-                <ArticleBody dangerouslySetInnerHTML={{ __html: post.html }} />
-              </ArticlePost>
+        <ContainerLayout>
+          <div>
+            <ArticlePost>
+              <header>
+                <Title>
+                  {post.frontmatter.title}
+                </Title>
+                <SmallText>
+                  <Calendar className="align-left text-primary" width="18" height="18" />
+                  <span className="align-middle"> {post.frontmatter.date} </span>
+                </SmallText>
+                <SmallText>
+                  <Clock className="align-middle text-primary" width="18" height="18" />
+                  <span className="align-middle"> {post.frontmatter.time} min read </span>
+                </SmallText>
+              </header>
 
-              <div>Suggest edits? <a href={post.editLink}>edit post on github</a> </div>
+              <ArticleBody dangerouslySetInnerHTML={{ __html: post.html }} />
 
-              <nav>
+
+              <BlogFooter>
+
+                <SmallText>
+                  <span className="align-middle"> Submit any improvements for this post  <a href={post.editLink}>on GitHub</a> </span>
+                </SmallText>
+
+
                 <NaviagtionList>
                   <NaviagtionLi>
                     {previous && (
@@ -62,9 +66,10 @@ const BlogPost = ({data, pageContext, location}) => {
                     )}
                   </NaviagtionLi>
                 </NaviagtionList>
-              </nav>
-            </div>
-          
+              </BlogFooter>
+            </ArticlePost>
+          </div>
+
         </ContainerLayout>
       </Intro>
     </Layout>

@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import { User, Briefcase, Feather, Smile, GitHub, Book } from 'react-feather'
+import { User, Briefcase, Feather, Smile, GitHub, Book, ChevronsRight, ChevronsLeft } from 'react-feather'
 
 import {NavbarElement, NavbarList, NavbarLogo} from './style'
 
@@ -12,7 +12,7 @@ const Navbar = ({ siteTitle }) => (
           <NavbarLogo>
             <h3>
               <Link to="/">
-                <Smile className="align-middle"/> <span className="align-middle"> {siteTitle} </span>
+                <ChevronsRight/><span className="align-middle"> {siteTitle} </span> <ChevronsLeft/>
               </Link>
             </h3>
           </NavbarLogo> 

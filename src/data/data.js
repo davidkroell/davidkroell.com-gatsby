@@ -1,6 +1,5 @@
 module.exports = {
   SiteTitle: 'David Kröll',
-  Sitelogo: '#',
   SiteAuthor: 'David Kröll',
   SiteDescription: 'Software Engineer',
   githubApiQuery: `query ($numOfRepos: Int!) {
@@ -60,18 +59,22 @@ module.exports = {
 
   SocialMediaLinks: [
     {
+      "id": 1,
       "name": "github",
       "url": "https://github.com/davidkroell"
     },
     {
+      "id": 2,
       "name": "linkedin",
       "url": "https://www.linkedin.com/in/david-kr%C3%B6ll-b29865171/"
     },
     {
+      "id": 3,
       "name": "dev",
       "url": "https://dev.to/davidkroell"
     },
     {
+      "id": 4,
       "name": "instagram",
       "url": "https://www.instagram.com/david1kroell"
     }

@@ -1,9 +1,18 @@
 import styled from 'styled-components';
 import variables from '../../data/variables';
+import React from 'react'
+
+import { Link } from "gatsby"
+import { Calendar, Clock } from 'react-feather'
+import Img from "gatsby-image"
+import { UnderLink, ReadMore } from "./index"
+import kebabCase from "lodash/kebabCase"
+
 
 export const Intro = styled.div`
   padding: 8rem 0 4rem 0;
 `;
+
 export const HeaderIntro = styled.header`
   display: grid;
   grid-template-columns: 1.5fr 1fr;
@@ -103,3 +112,58 @@ export const Category = styled.span`
   margin-right: 1rem;
   border: 3px solid ${variables.primary};
 `
+
+
+export const PostOutline = ({ post }) => {
+  const title = post.frontmatter.title || post.fields.slug
+  return (
+    <WorkPost key={post.fields.slug}>
+      <div className="media">
+        <div className="image-wrapper">
+          <Link to={post.fields.slug}>
+            <Img fluid={post.frontmatter.image.childImageSharp.fluid} title="work title" />
+          </Link>
+        </div>
+        <SmallText>
+          Image credits:
+                        <UnderLink href={post.frontmatter.imageCredit} target="_blank" title="image credit">
+            {post.frontmatter.imageCredit}
+          </UnderLink>
+        </SmallText>
+      </div>
+
+      <div className="content">
+        <header>
+          <SmallText>
+            <span className="align-middle">{post.frontmatter.categories.map((item, index) => (
+              <Link to={`/${kebabCase(item)}`} key={index}>
+                <span className="align-middle text-primary text-underline">#{item} </span>
+              </Link>
+            ))} </span>
+          </SmallText>
+          <PostTitle>
+            <Link className="text-primary" style={{ boxShadow: `none` }} to={post.fields.slug}>
+              {title}
+            </Link>
+          </PostTitle>
+          <SmallText>
+            <Calendar className="align-middle text-primary" width="18" height="18" />
+            <span className="align-middle">{post.frontmatter.date}</span>
+          </SmallText>
+          <SmallText>
+            <Clock className="align-middle text-primary" width="18" height="18" />
+            <span className="align-middle">{post.frontmatter.time} min read</span>
+          </SmallText>
+        </header>
+        <Text
+          dangerouslySetInnerHTML={{
+            __html: post.frontmatter.description || post.excerpt,
+          }}
+        />
+        <Link to={post.fields.slug}>
+          <ReadMore className="lined-link"> read more &#8594; </ReadMore>
+        </Link>
+      </div>
+    </WorkPost>
+  )
+}
