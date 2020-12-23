@@ -54,6 +54,10 @@ module.exports = {
       Quote: "In some ways, programming is like painting.",
       Author: "Andrew Hunt",
       Source: "The Pragmatic Programmer"
+    },
+    {
+      Quote: "Concurrency is not Parallelism",
+      Author: "Rob Pike"
     }
   ],
 
