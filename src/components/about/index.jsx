@@ -35,9 +35,9 @@ const About = () => {
 
               <Text>
                 Besides my tech background I enjoy beeing in the mountains - with skies in the winter and on my bike in the summer.
-                In addition, I am curious about all kind of sciences (especially astrophysics).
+                In addition, I am curious about all kind of science (especially astrophysics).
                 To keep up learning I read a lot of books on all possible subjects.
-                When I'm in a bar with friends I'll almost ever order Gin &amp; Tonic.
+                Of course, I also like to go out with friends and when I do, I prefer Gin &amp; Tonic.
               </Text>
             </div>
           </AboutSection>

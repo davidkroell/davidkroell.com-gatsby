@@ -82,7 +82,5 @@ module.exports = {
       "name": "instagram",
       "url": "https://www.instagram.com/david1kroell"
     }
-  ],
-
-  SiteCopyright: new Date().getFullYear(),
+  ]
 };
