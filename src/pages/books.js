@@ -1,10 +1,10 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { ContainerLayout, WorkPost, Intro, PostTitle, SubTitle, Title, Text, HeaderIntro, SubText, SmallText, UnderLink, ReadMore } from "../components/common"
+import { ContainerLayout, WorkPost, Intro, PostTitle, SubTitle, Title, Text, HeaderIntro, SubText, SmallText, ReadMore } from "../components/common"
 import kebabCase from "lodash/kebabCase"
 import { Calendar, ThumbsUp } from 'react-feather'
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 
 
 const BookIndex = ({ data }) => {
