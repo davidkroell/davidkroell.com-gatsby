@@ -19,6 +19,7 @@ Since this ebook reader does have a E-Ink display, I had to make it black and wh
 I also added a nice quote from George RR Martin (the auther of Game of Thrones).
 
 The mountains and the quote makes the screensaver perfect for anyone who loves reading and moutaineering at the same time.
+The quote's font is called `Cookie`.
 
 ### Download
 The perfectly fittet image ready for the Onyx is ready for download here.
