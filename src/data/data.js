@@ -56,8 +56,12 @@ module.exports = {
       Source: "The Pragmatic Programmer"
     },
     {
-      Quote: "Concurrency is not Parallelism",
+      Quote: "Concurrency is not Parallelism.",
       Author: "Rob Pike"
+    },
+    {
+      Quote: "A reader lives a thousand lives before he dies.",
+      Author: "George RR Martin"
     }
   ],
 
