@@ -66,11 +66,14 @@ export const WorkPost = styled.article`
   grid-template-columns: 1fr 1fr;
   align-items: center;
   margin-bottom: 5rem;
+
+  background-color: #fff;
+  border: 10px solid #fff;
+  border-radius: .9rem;
+  box-shadow: 0 17px 56px rgba(125,127,129,.17);
+
   @media(max-width: ${variables.breakpointPhone}) {
     grid-template-columns: 1fr;
-    border: 10px solid #fff;
-    border-radius: .9rem;
-    box-shadow: 0 17px 56px rgba(125,127,129,.17);
 	}
   > div.content {
     padding: 2rem 3rem;
@@ -87,21 +90,19 @@ export const WorkPost = styled.article`
       @media(min-width: ${variables.breakpointPhone}) {
         border: 10px solid #fff;
         border-radius: .9rem;
-        box-shadow: 0 17px 56px rgba(125,127,129,.17);
       }
       > a > div {
         overflow:hidden;
-        transition: all 250ms ease-in-out;
       }
     }
   }
+  transition: all 250ms ease-in-out;
   &:hover {
     cursor: pointer;
-    > div.media > .image-wrapper > a > div {
-      transform: scale(1.05)
-    }
+    transform: translateY(-0.5rem) scale(1.01)
   }
 `
+
 export const Category = styled.span`
   color: ${variables.primary};
   text-transform: uppercase;
@@ -112,58 +113,3 @@ export const Category = styled.span`
   margin-right: 1rem;
   border: 3px solid ${variables.primary};
 `
-
-
-export const PostOutline = ({ post }) => {
-  const title = post.frontmatter.title || post.fields.slug
-  return (
-    <WorkPost key={post.fields.slug}>
-      <div className="media">
-        <div className="image-wrapper">
-          <Link to={post.fields.slug}>
-            <Img fluid={post.frontmatter.image.childImageSharp.fluid} title="work title" />
-          </Link>
-        </div>
-        <SmallText>
-          Image credits:
-                        <UnderLink href={post.frontmatter.imageCredit} target="_blank" title="image credit">
-            {post.frontmatter.imageCredit}
-          </UnderLink>
-        </SmallText>
-      </div>
-
-      <div className="content">
-        <header>
-          <SmallText>
-            <span className="align-middle">{post.frontmatter.categories.map((item, index) => (
-              <Link to={`/${kebabCase(item)}`} key={index}>
-                <span className="align-middle text-primary text-underline">#{item} </span>
-              </Link>
-            ))} </span>
-          </SmallText>
-          <PostTitle>
-            <Link className="text-primary" style={{ boxShadow: `none` }} to={post.fields.slug}>
-              {title}
-            </Link>
-          </PostTitle>
-          <SmallText>
-            <Calendar className="align-middle text-primary" width="18" height="18" />
-            <span className="align-middle">{post.frontmatter.date}</span>
-          </SmallText>
-          <SmallText>
-            <Clock className="align-middle text-primary" width="18" height="18" />
-            <span className="align-middle">{post.frontmatter.time} min read</span>
-          </SmallText>
-        </header>
-        <Text
-          dangerouslySetInnerHTML={{
-            __html: post.frontmatter.description || post.excerpt,
-          }}
-        />
-        <Link to={post.fields.slug}>
-          <ReadMore className="lined-link"> read more &#8594; </ReadMore>
-        </Link>
-      </div>
-    </WorkPost>
-  )
-}
