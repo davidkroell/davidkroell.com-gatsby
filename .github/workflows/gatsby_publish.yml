@@ -11,11 +11,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+        
       - name: Publish Gatsby site
         uses: enriikke/gatsby-gh-pages-action@v2
         with:
           access-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-branch: gh-pages
-          gatsby-args: --prefix-paths
         env:
           GATSBY_GITHUB_API_TOKEN: ${{ secrets.GATSBY_GITHUB_API_TOKEN }}

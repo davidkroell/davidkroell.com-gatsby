@@ -6,7 +6,8 @@ import Img from "gatsby-image"
 import {Tag, ContainerLayout, WorkPost, Category, Intro, SubTitle, Title, Text} from "../components/common"
 
 const WorkIndex = ({ data }) => {
-  const works = data.allMarkdownRemark.edges
+  // const works = data.allMarkdownRemark.edges
+  const works = []
 
   return (
     <>
