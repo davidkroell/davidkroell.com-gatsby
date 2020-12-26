@@ -38,8 +38,8 @@ module.exports = {
   githubApiVariables: {
     numOfRepos: 12,
   },
-  BlogEditRoot: 'https://github.com/davidkroell/gatsby-portfolio/tree/master/content/blogposts',
-  ViewSourceUrl: 'https://github.com/davidkroell/gatsby-portfolio/',
+  BlogEditRoot: 'https://github.com/davidkroell/davidkroell.com/tree/master/content/blogposts',
+  ViewSourceUrl: 'https://github.com/davidkroell/davidkroell.com/',
 
   SiteContact: {
     email: 'david.kroell@outlook.com',

@@ -25,5 +25,5 @@ The quote's font is called `Cookie`.
 The perfectly fittet image ready for the Onyx is ready for download here.
 There is also a fullsized version available at the link below.
 
-[Download the images](https://github.com/davidkroell/gatsby-portfolio/tree/master/content/blogposts/2020/custom-screensaver-for-onyx-boox-note-air)
+[Download the images](https://github.com/davidkroell/davidkroell.com/tree/master/content/blogposts/2020/custom-screensaver-for-onyx-boox-note-air)
 
