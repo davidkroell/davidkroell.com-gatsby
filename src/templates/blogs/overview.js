@@ -53,7 +53,7 @@ const BlogOverview = ({ posts }) => {
                                             <header>
                                                 <SmallText>
                                                     <span className="align-middle">{post.frontmatter.categories.map((item, index) => (
-                                                        <Link to={`/${kebabCase(item)}`} key={index}>
+                                                        <Link to={`/blog/categories/${kebabCase(item)}`} key={index}>
                                                             <span className="align-middle text-primary text-underline">#{item} </span>
                                                         </Link>
                                                     ))} </span>

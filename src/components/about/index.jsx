@@ -8,20 +8,21 @@ const About = () => {
     query {
       placeholderImage: file(relativePath: { eq: "profile.webp" }) {
         childImageSharp {
-          fluid(maxWidth: 550) {
+          fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
+
   return (
     <>
       <SectionIntro>
         <ContainerLayout>
           <AboutSection>
             <div>
-              <Avatar fluid={data.placeholderImage.childImageSharp.fluid} alt="user photo" />
+              <Avatar fluid={data.placeholderImage.childImageSharp.fluid} alt="Picture of me summiting a mountain in winter" />
               <SubTitle>Software Engineering <br/> &amp; Mountains</SubTitle>
             </div>
             <div>

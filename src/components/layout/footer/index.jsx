@@ -6,6 +6,10 @@ import { ContainerLayout, ButtonDefault } from '../../common'
 const Footer = () => {
 	let displayedQuote = data.QuoteLines[Math.floor(Math.random() * data.QuoteLines.length)]
 
+	let openMail = () => {
+		window.location = `mailto:${data.SiteContact.email}`
+	}
+
 	return (
 		<>
 			<FooterStyle>
@@ -22,7 +26,7 @@ const Footer = () => {
 						</FooterSocialMedia>
 						<div>
 							<p className="text-primary quote">Do you want to get in touch? Drop me a note.</p>
-							<ButtonDefault href={`mailto:${data.SiteContact.email}`}>Contact me</ButtonDefault>
+							<ButtonDefault onClick={openMail} >Contact me</ButtonDefault>
 						</div>
 					</FooterBody>
 					<div className="box">
