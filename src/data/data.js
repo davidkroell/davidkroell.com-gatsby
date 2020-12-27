@@ -3,7 +3,7 @@ module.exports = {
   SiteAuthor: 'David Kröll',
   SiteDescription: 'Software Engineer',
   
-  BlogEditRoot: 'https://github.com/davidkroell/davidkroell.com/tree/master/content/blogposts',
+  BlogEditRoot: 'https://github.com/davidkroell/davidkroell.com/tree/main/content/blogposts',
   ViewSourceUrl: 'https://github.com/davidkroell/davidkroell.com/',
 
   SiteContact: {
