@@ -7,12 +7,19 @@ module.exports = {
     title: data.SiteTitle,
     description: data.SiteDescription,
     author: data.SiteAuthor,
+    siteUrl: data.SiteUrl,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/blog/categories/*`, `/books/categories/*`]
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

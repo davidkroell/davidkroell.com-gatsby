@@ -2,7 +2,8 @@ module.exports = {
   SiteTitle: "David Kröll",
   SiteAuthor: "David Kröll",
   SiteDescription: "My name is David and I'm a software engineer based in Tyrol, Austria. Currently I'm working at Liebherr Group as .NET Developer.",
-  
+  SiteUrl: "https://davidkroell.com/",
+
   BlogEditRoot: "https://github.com/davidkroell/davidkroell.com/tree/main/content/blogposts",
   ViewSourceUrl: "https://github.com/davidkroell/davidkroell.com/",
 
