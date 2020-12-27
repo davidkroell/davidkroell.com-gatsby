@@ -25,7 +25,9 @@ export const Text = styled.p`
     color: #3F51B5;
     text-decoration: underline;
   }
+  text-align: justify;
 `
+
 export const SubTitle = styled.h2`
   margin-top: 3rem;
   margin-bottom: 2rem;

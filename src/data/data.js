@@ -2,42 +2,7 @@ module.exports = {
   SiteTitle: 'David Kröll',
   SiteAuthor: 'David Kröll',
   SiteDescription: 'Software Engineer',
-  githubApiQuery: `query ($numOfRepos: Int!) {
-    viewer {
-      name
-      avatarUrl
-      isHireable
-      resourcePath
-      repositories(last: $numOfRepos, privacy: PUBLIC, orderBy: { field: STARGAZERS, direction:ASC } ) {
-        nodes {
-          name
-          description
-          homepageUrl
-          forkCount
-          createdAt
-          updatedAt
-          resourcePath
-          languages(last: 1, orderBy: { field: SIZE, direction:ASC } ) {
-            edges {
-              node {
-                name
-                color
-              }
-            }
-          }
-          licenseInfo {
-            name
-          }
-          stargazers {
-            totalCount
-          }
-        }
-      }
-    }
-  }`,
-  githubApiVariables: {
-    numOfRepos: 12,
-  },
+  
   BlogEditRoot: 'https://github.com/davidkroell/davidkroell.com/tree/master/content/blogposts',
   ViewSourceUrl: 'https://github.com/davidkroell/davidkroell.com/',
 

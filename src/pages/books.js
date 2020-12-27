@@ -25,7 +25,7 @@ const BookIndex = ({ data }) => {
       author: "Yuval Noah Harari",
       imagePath: "https://m.media-amazon.com/images/I/51Sn8PEXwcL.jpg",
       readDate: "2020",
-      link:"https://www.amazon.de/Sapiens-Humankind-Yuval-Noah-Harari/dp/0099590085/",
+      link: "https://www.amazon.de/Sapiens-Humankind-Yuval-Noah-Harari/dp/0099590085/",
       categories: ["science", "history"],
       description: "In his book, Harari talks about how humankind developed into what it is today - and above all why. The author clarifies things that most people think they already know. He talks about how religions, societies and capitalism evolved (just to name a few).",
       recommendetFor: "The book opened my eyes in many ways and showed one thing above all: life is never fair and it doesn't always get easier. I recommend it for everyone who believes one can learn from history."
@@ -39,10 +39,7 @@ const BookIndex = ({ data }) => {
         <Intro>
           <ContainerLayout>
 
-
-            <Title>
-              Books
-                </Title>
+            <Title>Books</Title>
 
             <HeaderIntro>
               <SubText>
@@ -83,7 +80,6 @@ const BookIndex = ({ data }) => {
                         dangerouslySetInnerHTML={{
                           __html: book.description
                         }} />
-
 
                       <SmallText>
                         <ThumbsUp className="align-middle text-primary" width="18" height="18" />

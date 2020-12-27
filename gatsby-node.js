@@ -6,7 +6,6 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const blogPost = path.resolve(`./src/templates/blogs/post.js`)
   const categoriesTemplate = path.resolve("src/templates/blogs/categories.js")
-  const portfolioWork = path.resolve(`./src/templates/works/work.js`)
   const blogResult = await graphql(
     `
       {
@@ -35,36 +34,13 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     `
   )
-  const worksResult = await graphql(
-    `
-      {
-        allMarkdownRemark(
-          filter: {fileAbsolutePath: {regex: "/(works)/"}}
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
-            }
-          }
-        }
-      }
-    `
-  )
 
-  if (blogResult.errors || worksResult.errors) {
+  if (blogResult.errors) {
     throw blogResult.errors
   }
 
   // Create blog posts pages.
   const posts = blogResult.data.blogGroup.edges
-  const works = worksResult.data.allMarkdownRemark.edges
 
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
@@ -93,16 +69,6 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     })
   })
-
-  // works.forEach((work) => {
-  //   createPage({
-  //     path: work.node.fields.slug,
-  //     component: portfolioWork,
-  //     context: {
-  //       slug: work.node.fields.slug
-  //     },
-  //   })
-  // })
 }
 
 exports.onCreateNode = ({ node, getNode, actions }) => {

@@ -1,13 +1,5 @@
 import styled from 'styled-components';
 import variables from '../../data/variables';
-import React from 'react'
-
-import { Link } from "gatsby"
-import { Calendar, Clock } from 'react-feather'
-import Img from "gatsby-image"
-import { UnderLink, ReadMore } from "./index"
-import kebabCase from "lodash/kebabCase"
-
 
 export const Intro = styled.div`
   padding: 8rem 0 4rem 0;
