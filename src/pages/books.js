@@ -8,29 +8,7 @@ import { Link } from "gatsby"
 
 
 const BookIndex = ({ data }) => {
-
-  const books = [
-    {
-      readDate: "2020",
-      title: "The Intelligent Investor",
-      author: "Benjamin Graham",
-      imagePath: "https://images-eu.ssl-images-amazon.com/images/I/91yj3mbz4JL.jpg",
-      link: "https://www.amazon.de/Intelligent-Investieren-gro%C3%9Fartiger-Investment-Ratgeber-Investing%C2%AB/dp/3959723415/",
-      description: "The most successful book on value investing written by Benjamin Graham, who's student Warren Buffet was. Published the first time in 1949 but nevertheless a standard reference for long-term private investors.",
-      recommendetFor: "Everyone who is looking forward to take care of his financials and is willing to invest at the Wall Street.",
-      categories: ["finance"]
-    },
-    {
-      title: "A Brief History of Humankind",
-      author: "Yuval Noah Harari",
-      imagePath: "https://m.media-amazon.com/images/I/51Sn8PEXwcL.jpg",
-      readDate: "2020",
-      link: "https://www.amazon.de/Sapiens-Humankind-Yuval-Noah-Harari/dp/0099590085/",
-      categories: ["science", "history"],
-      description: "In his book, Harari talks about how humankind developed into what it is today - and above all why. The author clarifies things that most people think they already know. He talks about how religions, societies and capitalism evolved (just to name a few).",
-      recommendetFor: "The book opened my eyes in many ways and showed one thing above all: life is never fair and it doesn't always get easier. I recommend it for everyone who believes one can learn from history."
-    }
-  ]
+  const books = data.allBooksJson.nodes;
 
   return (
     <>
@@ -112,3 +90,20 @@ const BookIndex = ({ data }) => {
 
 export default BookIndex
 
+
+export const pageQuery = graphql`
+query {
+  allBooksJson(limit: 2000, sort: {order: DESC, fields: [readDate]}) {
+    nodes {
+      author
+      categories
+      description
+      imagePath
+      link
+      readDate
+      recommendetFor
+      title
+    }
+  }
+}
+`
