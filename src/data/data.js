@@ -40,7 +40,7 @@ module.exports = {
     {
       "id": 2,
       "name": "linkedin",
-      "url": "https://www.linkedin.com/in/david-kr%C3%B6ll-b29865171/"
+      "url": "https://www.linkedin.com/in/davidkroell/"
     },
     {
       "id": 3,
