@@ -2,11 +2,11 @@ import React from "react"
 import { graphql } from "gatsby"
 import BlogOverview from "./overview"
 
-const Categories = ({ data }) => {
+const Categories = ({ data, pageContext }) => {
   const posts  = data.allMarkdownRemark.nodes
 
   return (
-    <BlogOverview posts={posts}></BlogOverview>
+    <BlogOverview title={`Posts about #${pageContext.category}`}  posts={posts}></BlogOverview>
   )
 }
 
@@ -22,12 +22,12 @@ export const pageQuery = graphql`
       totalCount
       nodes {
         excerpt
+        timeToRead
         fields {
           slug
         }
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
-          time
           title
           image {
             childImageSharp {

@@ -36,7 +36,7 @@ const BlogPost = ({ data, pageContext, location }) => {
                 </SmallText>
                 <SmallText>
                   <Clock className="align-middle text-primary" width="18" height="18" />
-                  <span className="align-middle"> {post.frontmatter.time} min read </span>
+                  <span className="align-middle"> {post.timeToRead} min read </span>
                 </SmallText>
               </header>
 
@@ -90,6 +90,7 @@ export const data = graphql`
       excerpt
       rawMarkdownBody
       html
+      timeToRead
 
       fields {
         slug
@@ -99,7 +100,6 @@ export const data = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description,
-        time
       }
     }
   }

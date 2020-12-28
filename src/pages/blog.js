@@ -6,7 +6,7 @@ const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes
 
   return (
-    <BlogOverview posts={posts}></BlogOverview>
+    <BlogOverview title="Blog" posts={posts}></BlogOverview>
   )
 }
 
@@ -25,9 +25,9 @@ export const pageQuery = graphql`
         fields {
           slug
         }
+        timeToRead
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
-          time
           title
           image {
             childImageSharp {

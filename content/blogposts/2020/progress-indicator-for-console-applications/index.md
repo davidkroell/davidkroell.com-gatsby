@@ -4,7 +4,6 @@ categories: ['programming']
 image: './unsplash-7_kRuX1hSXM.webp'
 imageCredit: https://unsplash.com/photos/7_kRuX1hSXM
 date: "2020-12-01"
-time: 3
 description: "Some thoughts about progress indicators in console application. I've added implementation details for Go and C# using several approaches."
 ---
 

@@ -2,9 +2,8 @@
 title: "Custom screensaver for Onyx Boox Note Air"
 categories: ['reading']
 image: './onyx_screensaver_title-image.webp'
-imageCredit: https://unsplash.com/photos/6bav58U0kIU
+# imageCredit: https://unsplash.com/photos/6bav58U0kIU
 date: "2020-12-25"
-time: 1
 description: "I've created a custom screensaver for my Onyx Boox Note Air - and it is available for download."
 ---
 
