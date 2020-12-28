@@ -68,7 +68,26 @@ export const ArticleBody = styled.div`
     border-radius 1.5px;
   }
 
-  
+  table {
+    font-size: 1rem;
+    margin: 1rem 0;
+    table-layout: auto;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table td, th {
+    padding: 0.5rem 1rem;
+  }
+
+  table th {
+    text-align: center;
+    font-size: 1.05rem;
+  }
+
+  table td {
+    border: 1px solid ${variables.lightGrey};
+  }
 `
 
 export const NaviagtionList = styled.ul`

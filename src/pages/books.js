@@ -35,7 +35,8 @@ const BookIndex = ({ data }) => {
   return (
     <>
       <Layout>
-        <SEO title="Books" />
+        <SEO title="Books"
+          description="Some books I've read which in some way inspired me or I found very interesting." />
         <Intro>
           <ContainerLayout>
 
@@ -45,6 +46,7 @@ const BookIndex = ({ data }) => {
               <SubText>
                 Listed below are all the books I remember reading and which are worth mentioning here.
                 I tried to quickly outline them and give recommendations for people who might be interested in reading them.
+                This list is by far not complete neither will it ever be.
                 </SubText>
             </HeaderIntro>
             <ContainerLayout className="wrapper">

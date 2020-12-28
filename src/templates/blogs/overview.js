@@ -12,13 +12,12 @@ const BlogOverview = ({ title, posts }) => {
 
     return (
         <Layout>
-            <SEO title={title} />
+            <SEO title={title}
+                description="Blog posts based on various engineering, development and IT topics - including background information and practical tips." />
             <Intro>
                 <ContainerLayout>
 
-                    <Title>
-                        Articles
-            </Title>
+                    <Title>Articles</Title>
                     <HeaderIntro>
                         <SubText>
                             Blog posts based on various engineering, development and IT topics. Most of the time focused on software engineering - with background information and practical tips from real projects.
@@ -42,15 +41,15 @@ const BlogOverview = ({ title, posts }) => {
                                         </div>
                                         {
                                             post.frontmatter.imageCredit ?
-                                            (
-                                                <SmallText>
-                                                    Image credits:
-                                                    <UnderLink href={post.frontmatter.imageCredit} target="_blank" title="Image credit link">
-                                                        {post.frontmatter.imageCredit}
-                                                    </UnderLink>
-                                                </SmallText>
-                                            )
-                                            : null
+                                                (
+                                                    <SmallText>
+                                                        Image credits:
+                                                        <UnderLink href={post.frontmatter.imageCredit} target="_blank" title="Image credit link">
+                                                            {post.frontmatter.imageCredit}
+                                                        </UnderLink>
+                                                    </SmallText>
+                                                )
+                                                : null
                                         }
                                     </div>
 
