@@ -24,7 +24,7 @@ const BookIndex = ({ data }) => {
               <SubText>
                 Listed below are all the books I remember reading and which are worth mentioning here.
                 I tried to quickly outline them and give recommendations for people who might be interested in reading them.
-                This list is by far not complete neither will it ever be.
+                This list is by far not complete neither will it ever be. The links to the books are affiliate links.
                 </SubText>
             </HeaderIntro>
             <ContainerLayout className="wrapper">
