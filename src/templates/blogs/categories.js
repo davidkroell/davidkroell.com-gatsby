@@ -3,10 +3,13 @@ import { graphql } from "gatsby"
 import BlogOverview from "./overview"
 
 const Categories = ({ data, pageContext }) => {
-  const posts  = data.allMarkdownRemark.nodes
+  const posts = data.allMarkdownRemark.nodes
 
   return (
-    <BlogOverview title={`Posts about #${pageContext.category}`}  posts={posts}></BlogOverview>
+    <BlogOverview
+      title={`Posts about #${pageContext.category}`}
+      posts={posts}
+    ></BlogOverview>
   )
 }
 
@@ -29,7 +32,7 @@ export const pageQuery = graphql`
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           title
-          image {
+          cover_image {
             childImageSharp {
               fluid(maxWidth: 600, quality: 100) {
                 ...GatsbyImageSharpFluid

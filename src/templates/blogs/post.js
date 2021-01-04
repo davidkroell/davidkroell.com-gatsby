@@ -2,12 +2,20 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import { Calendar, Clock } from 'react-feather'
+import { Calendar, Clock } from "react-feather"
 import baseData from "../../data/data"
 
-import { Intro, Title, ArticlePost, SmallText, ArticleBody, NaviagtionList, NaviagtionLi, BlogFooter } from '../../components/styled/posts'
-import { ContainerLayout } from '../../components/common'
-
+import {
+  Intro,
+  Title,
+  ArticlePost,
+  SmallText,
+  ArticleBody,
+  NaviagtionList,
+  NaviagtionLi,
+  BlogFooter,
+} from "../../components/styled/posts"
+import { ContainerLayout } from "../../components/common"
 
 const BlogPost = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -22,33 +30,46 @@ const BlogPost = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <Intro >
+      <Intro>
         <ContainerLayout>
           <div>
             <ArticlePost>
               <header>
-                <Title>
-                  {post.frontmatter.title}
-                </Title>
+                <Title>{post.frontmatter.title}</Title>
                 <SmallText>
-                  <Calendar className="align-left text-primary" width="18" height="18" />
-                  <span className="align-middle"> {post.frontmatter.date} </span>
+                  <Calendar
+                    className="align-left text-primary"
+                    width="18"
+                    height="18"
+                  />
+                  <span className="align-middle">
+                    {" "}
+                    {post.frontmatter.date}{" "}
+                  </span>
                 </SmallText>
                 <SmallText>
-                  <Clock className="align-middle text-primary" width="18" height="18" />
-                  <span className="align-middle"> {post.timeToRead} min read </span>
+                  <Clock
+                    className="align-middle text-primary"
+                    width="18"
+                    height="18"
+                  />
+                  <span className="align-middle">
+                    {" "}
+                    {post.timeToRead} min read{" "}
+                  </span>
                 </SmallText>
               </header>
 
               <ArticleBody dangerouslySetInnerHTML={{ __html: post.html }} />
 
-
               <BlogFooter>
-
                 <SmallText>
-                  <span className="align-middle"> Submit any improvements for this post  <a href={post.editLink}>on GitHub</a> </span>
+                  <span className="align-middle">
+                    {" "}
+                    Submit any improvements for this post{" "}
+                    <a href={post.editLink}>on GitHub</a>{" "}
+                  </span>
                 </SmallText>
-
 
                 <NaviagtionList>
                   <NaviagtionLi>
@@ -69,14 +90,13 @@ const BlogPost = ({ data, pageContext, location }) => {
               </BlogFooter>
             </ArticlePost>
           </div>
-
         </ContainerLayout>
       </Intro>
     </Layout>
   )
 }
 
-export default BlogPost;
+export default BlogPost
 
 export const data = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -99,7 +119,7 @@ export const data = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        description,
+        description
       }
     }
   }

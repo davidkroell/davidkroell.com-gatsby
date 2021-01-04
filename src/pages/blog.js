@@ -5,9 +5,7 @@ import BlogOverview from "../templates/blogs/overview"
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes
 
-  return (
-    <BlogOverview title="Blog" posts={posts}></BlogOverview>
-  )
+  return <BlogOverview title="Blog" posts={posts}></BlogOverview>
 }
 
 export default BlogIndex
@@ -19,7 +17,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(blogposts)/"}}, sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(blogposts)/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       nodes {
         excerpt
         fields {
@@ -29,7 +30,7 @@ export const pageQuery = graphql`
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           title
-          image {
+          cover_image {
             childImageSharp {
               fluid(maxWidth: 600, quality: 100) {
                 ...GatsbyImageSharpFluid

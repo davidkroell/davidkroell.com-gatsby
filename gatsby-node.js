@@ -10,7 +10,7 @@ exports.createPages = async ({ graphql, actions }) => {
     `
       {
         blogGroup: allMarkdownRemark(
-          filter: {fileAbsolutePath: {regex: "/(blog)/"}}
+          filter: { fileAbsolutePath: { regex: "/(blog)/" } }
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
@@ -74,10 +74,15 @@ exports.createPages = async ({ graphql, actions }) => {
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === `MarkdownRemark`
-    && node.fileAbsolutePath.includes("blogposts")) {
-
-    const slug = createFilePath({ node, getNode, basePath: `content/blogposts` })
+  if (
+    node.internal.type === `MarkdownRemark` &&
+    node.fileAbsolutePath.includes("blogposts")
+  ) {
+    const slug = createFilePath({
+      node,
+      getNode,
+      basePath: `content/blogposts`,
+    })
     createNodeField({
       node,
       name: `slug`,

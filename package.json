@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "author": "David Kröll <david.kroell@outlook.com>",
   "dependencies": {
+    "dev-to-git": "^1.4.1",
     "gatsby": "^2.28.2",
     "gatsby-image": "^2.4.7",
     "gatsby-plugin-google-analytics": "^2.3.13",
@@ -52,13 +53,14 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "dev-to-git": "dev-to-git"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/davidkroell/gatsby-portfolio"
+    "url": "https://github.com/davidkroell/davidkroell.com.git"
   },
   "bugs": {
-    "url": "https://github.com/davidkroell/gatsby-portfolio/issues"
+    "url": "https://github.com/davidkroell/davidkroell.com/issues"
   }
 }

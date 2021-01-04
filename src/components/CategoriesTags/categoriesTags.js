@@ -2,8 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import kebabCase from "lodash/kebabCase"
 import { useStaticQuery, Link, graphql } from "gatsby"
-import {Tag} from '../common'
-
+import { Tag } from "../common"
 
 const CategoriesTags = () => {
   const data = useStaticQuery(graphql`
@@ -15,21 +14,29 @@ const CategoriesTags = () => {
         }
       }
     }
-  `);
+  `)
 
   return (
-  <div>
     <div>
       <div>
-        {data.allMarkdownRemark.group.map(tag => (
-          <Tag as={Link} key={tag.fieldValue} to={`/blog/categories/${kebabCase(tag.fieldValue)}/`} activeClassName="active">
-            <span>{tag.fieldValue} {tag.totalCount} </span>
-          </Tag>
-        ))}
+        <div>
+          {data.allMarkdownRemark.group.map(tag => (
+            <Tag
+              as={Link}
+              key={tag.fieldValue}
+              to={`/blog/categories/${kebabCase(tag.fieldValue)}/`}
+              activeClassName="active"
+            >
+              <span>
+                {tag.fieldValue} {tag.totalCount}{" "}
+              </span>
+            </Tag>
+          ))}
+        </div>
       </div>
     </div>
-  </div>
-)}
+  )
+}
 
 CategoriesTags.propTypes = {
   data: PropTypes.shape({
