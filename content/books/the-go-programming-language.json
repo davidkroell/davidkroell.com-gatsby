@@ -1,0 +1,13 @@
+{
+    "readDate": 2018,
+    "title": "The Go Programming Language",
+    "author": "Alan A. A. Donovan",
+    "imagePath": "https://images-eu.ssl-images-amazon.com/images/I/41aSIiETPPL._SX402_BO1,204,203,200_.jpg",
+    "link": "https://amzn.to/3of2Xgc",
+    "description": "The standard reference and swiss-army knife for every Go programmer. Goes form zero to hero and covers every topic including background knowledge. In addition, it shows how to solve real-world problems with Go.",
+    "recommendetFor": "For developers who at least know a higher-level language and want to learn Go. Does not require any prior Golang knowledge.",
+    "categories": [
+        "computerscience",
+        "programming"
+    ]
+}
