@@ -1,7 +1,7 @@
 ---
 title: "Progress indicator for console applications"
-categories: ['programming']
-image: './unsplash-7_kRuX1hSXM.webp'
+categories: ["programming"]
+image: "./unsplash-7_kRuX1hSXM.webp"
 imageCredit: https://unsplash.com/photos/7_kRuX1hSXM
 date: "2020-12-01"
 description: "Some thoughts about progress indicators in console application. I've added implementation details for Go and C# using several approaches."
@@ -35,6 +35,7 @@ Where dots get appended to the line as time flies and finally, after the operati
 I'll describe it here for C# and Go.
 
 In a C# console application, you can use the following code:
+
 ```csharp
 Console.Write("Doing long lasting operation");
 
@@ -57,6 +58,7 @@ cts.Cancel(); // stop the dot-printing task
 
 Console.WriteLine("\nFinished!");
 ```
+
 Note the difference between `Console.Write()` and `Console.WriteLine()` here, for appending to the same line and writing to a new one.
 When the `Finished!` output gets printed, a `\n` has to be added before to start on a new line.
 
@@ -85,8 +87,8 @@ while (!work.IsCompleted)
 Console.WriteLine("\nFinished!");
 ```
 
-
 In Golang, the following code would do the same as above:
+
 ```go
 fmt.Print("Doing long lasting operation")
 closer := make(chan struct{})
@@ -118,7 +120,6 @@ fmt.Println("\nFinished!")
 ```
 
 When you think of cancellation, in C#, one could wait for console input and then cancel the background task.
-Compared to C# tasks, cancelling goroutines explicitely is not possible. 
+Compared to C# tasks, cancelling goroutines explicitely is not possible.
 When the use case allows it, you may however split your work into a loop and introduce channels using the `select` statement.
 Whether it is a good decision depends of course on the use case.
-

@@ -1,7 +1,7 @@
 ---
 title: "Custom screensaver for Onyx Boox Note Air"
-categories: ['reading']
-image: './onyx_screensaver_title-image.webp'
+categories: ["reading"]
+image: "./onyx_screensaver_title-image.webp"
 # imageCredit: https://unsplash.com/photos/6bav58U0kIU
 date: "2020-12-25"
 description: "I've created a custom screensaver for my Onyx Boox Note Air - and it is available for download."
@@ -21,8 +21,8 @@ The mountains and the quote makes the screensaver perfect for anyone who loves r
 The quote's font is called `Cookie`.
 
 ### Download
+
 The perfectly fittet image ready for the Onyx is ready for download here.
 There is also a fullsized version available at the link below.
 
 [Download the images](https://github.com/davidkroell/davidkroell.com/tree/main/content/blogposts/2020/custom-screensaver-for-onyx-boox-note-air)
-

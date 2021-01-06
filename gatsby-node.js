@@ -5,12 +5,17 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const blogPost = path.resolve(`./src/templates/blogs/post.js`)
-  const categoriesTemplate = path.resolve("src/templates/blogs/categories.js")
+  const blogCategoriesTemplate = path.resolve(
+    "src/templates/blogs/categories.js"
+  )
+  const bookCategoriesTemplate = path.resolve(
+    "src/templates/books/categories.js"
+  )
   const blogResult = await graphql(
     `
       {
         blogGroup: allMarkdownRemark(
-          filter: {fileAbsolutePath: {regex: "/(blog)/"}}
+          filter: { fileAbsolutePath: { regex: "/(blog)/" } }
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
@@ -26,8 +31,15 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
-        categoriesGroup: allMarkdownRemark(limit: 2000) {
+
+        blogCategoriesGroup: allMarkdownRemark(limit: 2000) {
           group(field: frontmatter___categories) {
+            fieldValue
+          }
+        }
+
+        bookCategoriesGroup: allBooksJson(limit: 2000) {
+          group(field: categories) {
             fieldValue
           }
         }
@@ -57,16 +69,26 @@ exports.createPages = async ({ graphql, actions }) => {
     })
 
     // Extract tag data from query
-    const categories = blogResult.data.categoriesGroup.group
+    const categories = blogResult.data.blogCategoriesGroup.group
     // Make tag pages
     categories.forEach(category => {
       createPage({
         path: `/blog/categories/${_.kebabCase(category.fieldValue)}/`,
-        component: categoriesTemplate,
+        component: blogCategoriesTemplate,
         context: {
           category: category.fieldValue,
         },
       })
+    })
+  })
+
+  blogResult.data.bookCategoriesGroup.group.forEach(bookCategory => {
+    createPage({
+      path: `/books/categories/${_.kebabCase(bookCategory.fieldValue)}/`,
+      component: bookCategoriesTemplate,
+      context: {
+        category: bookCategory.fieldValue,
+      },
     })
   })
 }
@@ -74,10 +96,15 @@ exports.createPages = async ({ graphql, actions }) => {
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === `MarkdownRemark`
-    && node.fileAbsolutePath.includes("blogposts")) {
-
-    const slug = createFilePath({ node, getNode, basePath: `content/blogposts` })
+  if (
+    node.internal.type === `MarkdownRemark` &&
+    node.fileAbsolutePath.includes("blogposts")
+  ) {
+    const slug = createFilePath({
+      node,
+      getNode,
+      basePath: `content/blogposts`,
+    })
     createNodeField({
       node,
       name: `slug`,

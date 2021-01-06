@@ -6,4 +6,5 @@ It is based on my template available at https://github.com/davidkroell/gatsby-po
 The page is built using Gatsby and hosted on GitHub pages.
 
 ## License
+
 MIT

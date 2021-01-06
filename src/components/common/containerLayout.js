@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import variables from "../../data/variables";
+import styled from "styled-components"
+import variables from "../../data/variables"
 
 export const ContainerLayout = styled.div`
   width: ${variables.width};
@@ -13,5 +13,4 @@ export const ContainerLayout = styled.div`
   @media only screen and (min-width: ${variables.breakpointLarge}) {
     max-width: 75rem;
   }
-  
 `

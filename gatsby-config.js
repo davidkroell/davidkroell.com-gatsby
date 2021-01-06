@@ -1,13 +1,14 @@
-const data = require('./src/data/data');
-require('dotenv').config({
+const data = require("./src/data/data")
+require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-});
+})
 module.exports = {
   siteMetadata: {
     title: data.SiteTitle,
     description: data.SiteDescription,
     author: data.SiteAuthor,
     siteUrl: data.SiteUrl,
+    keywords: data.Keywords,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -17,14 +18,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/blog/categories/*`, `/books/categories/*`]
-      }
+        exclude: [`/blog/categories/*`, `/books/categories/*`],
+      },
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -45,10 +46,8 @@ module.exports = {
       options: {
         name: `books`,
         path: `${__dirname}/content/books/`,
-        plugins: [
-          `gatsby-transformer-json`
-        ]
-      }
+        plugins: [`gatsby-transformer-json`],
+      },
     },
     {
       resolve: `gatsby-transformer-remark`,

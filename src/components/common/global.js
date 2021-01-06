@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
-import variables from "../../data/variables";
-import styled from 'styled-components';
+import { createGlobalStyle } from "styled-components"
+import variables from "../../data/variables"
+import styled from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
   // normalize
@@ -161,7 +161,7 @@ export const GlobalStyle = createGlobalStyle`
 export const Title = styled.h1`
   font-size: 3rem;
   text-transform: capitalize;
-  @media(max-width: ${variables.breakpointPhone}) {
+  @media (max-width: ${variables.breakpointPhone}) {
     font-size: 2rem;
   }
 `
