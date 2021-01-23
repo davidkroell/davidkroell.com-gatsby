@@ -1,0 +1,10 @@
+{
+  "readDate": 2021,
+  "title": "Distributed Systems",
+  "author": "M. van Steen & A. S. Tanenbaum",
+  "imagePath": "https://www.distributed-systems.net/wp-content/uploads/2017/02/DS3-book-cover.png",
+  "link": "https://www.distributed-systems.net/index.php/books/ds3/",
+  "description": "Provides very good background knowledge and basic principles of distributed computer systems. Covers many topics including general advice and paradigms which suit every distributed system.",
+  "recommendetFor": "People who'd like to get familiar with distributed architectures from the ground up. Many samples and real-world distributed system organizations alongside sample code in Python.",
+  "categories": ["computerscience"]
+}
