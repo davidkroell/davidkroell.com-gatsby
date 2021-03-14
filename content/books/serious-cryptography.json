@@ -1,0 +1,10 @@
+{
+  "readDate": 2021,
+  "title": "Serious Cryptography",
+  "author": "Jean-Philippe Aumasson",
+  "imagePath": "https://images-na.ssl-images-amazon.com/images/I/518igOyteUL._SX376_BO1,204,203,200_.jpg",
+  "link": "https://amzn.to/2NnGdxm",
+  "description": "How are crypto-algorithms designed and how does the math behind work? Why is RSA easy to understand (the basic principles) and hard to implement? This book gives you everything you need to know about cryptogarphy.",
+  "recommendetFor": "Advisable for any people who work in IT and are likely to design and implement secure systems. Useful for any Dev and Ops who care about security and want to understand it's principles and origins.",
+  "categories": ["computerscience", "security"]
+}
