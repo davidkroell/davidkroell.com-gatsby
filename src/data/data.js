@@ -52,6 +52,10 @@ module.exports = {
       Quote: "The universe offers a paradox too great for the finite mind to grasp. As the living brain cannot conceive of a nonliving brain — although it may think it can — the finite mind cannot grasp the infinite.",
       Author: "Stephen King",
       Source: "The Gunslinger"
+    },
+    {
+      Quote: "There is no unique picture of reality.",
+      Author: "Stephen Hawking"
     }
   ],
 
