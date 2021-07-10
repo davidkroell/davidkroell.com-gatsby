@@ -33,7 +33,7 @@ export const ArticleBody = styled.div`
   margin-top: 5rem;    
   text-align: justify;
 
-  p {
+  p, ul {
     font-size: 1.25rem;
   }
 
@@ -57,7 +57,7 @@ export const ArticleBody = styled.div`
   blockquote {
     border-left: 4px solid #7d8a97;
     padding-left: 1.2rem;
-    color: ${variables.lightGrey}
+    color: ${variables.darkGrey}
   }
 
   hr {
