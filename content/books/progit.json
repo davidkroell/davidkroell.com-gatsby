@@ -1,0 +1,12 @@
+{
+    "readDate": 2021,
+    "title": "Pro Git",
+    "author": "Scott Chacon and Ben Straub",
+    "imagePath": "https://git-scm.com/images/progit2.png",
+    "link": "https://git-scm.com/book/en/v2",
+    "description": "What is Git, how does it work and how do I use it in a productive manner? This book covers every aspect of Git from the ground up. Most insightful to me were the history and Git internals.",
+    "recommendetFor": "Every developer which is using or planning to use Git. It is not required to completely read through the book - you can just select the parts you're interested in (therefore also recommendet for experienced Git users).",
+    "categories": [
+        "computerscience"
+    ]
+}
