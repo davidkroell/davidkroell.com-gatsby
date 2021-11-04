@@ -26,7 +26,7 @@ There is a problem we can solve with DI and it's solution is called
 **Dependency Inversion Principle** (the D of SOLI**D**, DIP abbreviated).
 
 Assume an implementation like the following:
-```c#
+```csharp
 public class PeopleService
 {
     private readonly PeopleRepository _peopleRepository;
@@ -40,7 +40,7 @@ public class PeopleService
 
 The problem here is the creation dependency (the `new` keyword) to `PeopleRepository`.
 
-![Hard and direct (bad) dependency between classes](docs/hard-dependency.png)
+![Hard and direct (bad) dependency between classes](hard-dependency.png)
 
 *Hard and direct (bad) dependency between classes*
 
@@ -54,18 +54,18 @@ First of all, it's bad for code quality, as the quality attributes **testability
 cannot be met.
 
 Furthermore, we cannot provide a mock instance to the `PeopleService` in order to write a unit test for it.
-The solution to this problem is to pull the creation dependency (the `new`) up to the user
+The solution to this problem is to pull the creation dependency (the `new`) up to the consumer
 of the `PeopleService`.
 
 ![The dependency is now inversed, it's the responsibility of whoever wants to use the
-PeopleService to pass an instance of IPeopleRepository](docs/inversed-dependency.png)
+PeopleService to pass an instance of IPeopleRepository](inversed-dependency.png)
 
 *The dependency is now inversed, it's the responsibility of whoever wants to use the
 PeopleService to pass an instance of IPeopleRepository*
 
 It's now his responsibility to supply a correct instance of `IPeopleRepository` to the `PeopleService`.
 
-```c#
+```csharp
 public class PeopleService
 {
     private readonly PeopleRepository _peopleRepository;
@@ -82,7 +82,7 @@ in order to allow also supplying other implementations (e.g. for testing)
 to `PeopleService` to rely on.
 It is also more clear which other classes are required for the `PeopleService` to work correctly.
 
-```c#
+```csharp
 var peopleService = new PeopleService(new PeopleRepository());
 // or with another (mock) implementation
 var peopleService = new PeopleService(new MockPeopleRepository());
@@ -93,7 +93,7 @@ var peopleService = new PeopleService(new MockPeopleRepository());
 Imagine you apply the **Dependency Inversion Principle** everywhere across your app.
 At some point, all the instances of your classes have to be instantiated and passed to the dependent classes.
 
-![A dependency tree](docs/dependency-tree.png)
+![A dependency tree](dependency-tree.png)
 
 *A dependency tree*
 
@@ -110,7 +110,7 @@ This is where dependency injection comes to the rescue. It's a technique which c
 copes with all it's dependencies. The only thing you'd like to do is to have a small library
 which you can call: I'd like to have an instance of `PeopleService`, could you give me some?
 
-```c#
+```csharp
 var peopleService = serviceLibrary.GetService<PeopleService>();
 ```
 
@@ -143,7 +143,7 @@ In consequence all the code snippets below reside in the `ServiceLibrary` class.
 We'll start off with the easy part.
 As you can see below, the basic implementation is very simple.
 
-```c#
+```csharp
 private readonly Dictionary<Type, Type> _mappings = new();
 
 public void Map(Type interfaceType, Type implementationType)
@@ -175,7 +175,7 @@ Depending on the concrete implementation type, all the dependencies for it
 also have to be evaluated and built.
 The above explanation is summarized in the following graphic:
 
-![How the service resolve works with interfaces and mappings](docs/getservice-summary.png)
+![How the service resolve works with interfaces and mappings](getservice-summary.png)
 
 *How the service resolve works with interfaces and mappings*
 
@@ -184,7 +184,7 @@ This is possible by using reflection, since all dependencies are listed inside
 the constructor and C# allows us to scan the constructor definition of any type.
 How this works in code is shown below.
 
-```c#
+```csharp
 private Type[] GetDependentTypes(Type implType)
 {
     // retrieve constructor info
@@ -208,7 +208,7 @@ The below snippet shows how the creation of the instances is done.
 It's implemented in a recursive manner because of the tree-structure which
 may result depending on which types you register upfront.
 
-```c#
+```csharp
 public object GetService(Type type)
 {
     // lookup in the registered mappings
@@ -237,7 +237,7 @@ public object GetService(Type type)
 I left out some null-handling and edge-cases here, but basically that's it.
 We can now add an generic method to make the library more easy to use:
 
-```c#
+```csharp
 public T GetService<T>()
 {
     return (T) GetService(typeof(T));
@@ -252,7 +252,7 @@ We'll use the generic methods we created, since this is easier in my opinion.
 We just have to register all our interface-implementation type mappings first,
 and afterwards we are able to resolve an interface from it.
 
-```c#
+```csharp
 var sl = new ServiceLibrary();
 
 // register
