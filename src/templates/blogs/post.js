@@ -4,6 +4,7 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import { Calendar, Clock } from "react-feather"
 import baseData from "../../data/data"
+import Img from "gatsby-image"
 
 import {
   Intro,
@@ -19,6 +20,9 @@ import { ContainerLayout } from "../../components/common"
 
 const BlogPost = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
+
+  console.log(post)
+
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
 
@@ -35,6 +39,12 @@ const BlogPost = ({ data, pageContext, location }) => {
           <div>
             <ArticlePost>
               <header>
+                <Img
+                  fluid={post.frontmatter.image.childImageSharp.fluid}
+                  title={post.frontmatter.title}
+                  alt={post.frontmatter.title + " - Title Image"}
+                />
+
                 <Title>{post.frontmatter.title}</Title>
                 <SmallText>
                   <Calendar
@@ -120,6 +130,13 @@ export const data = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        image {
+          childImageSharp {
+            fluid(maxWidth: 800, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

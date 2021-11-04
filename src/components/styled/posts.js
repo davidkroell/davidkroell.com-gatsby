@@ -35,6 +35,7 @@ export const ArticleBody = styled.div`
 
   p, ul {
     font-size: 1.25rem;
+    font-weight: 200;
   }
 
   h1 {
@@ -54,9 +55,11 @@ export const ArticleBody = styled.div`
     text-align: left;
 
   }
+
   blockquote {
     border-left: 4px solid #7d8a97;
     padding-left: 1.2rem;
+    margin: 0;
     color: ${variables.darkGrey}
   }
 
