@@ -114,7 +114,7 @@ This also applies to related string operations like `StartsWith()`, `EndsWith()`
 I also interpret this as a code smell, because the available language features are not used.
 In addition, some IDE's even detect this smell.
 
-As always, the code can be found at my [GitHub](https://github.com/davidkroell/davidkroell.com/tree/main/content/blogposts/dont-use-tolower-to-compare-strings/src/).
+As always, the code can be found at my [GitHub](https://github.com/davidkroell/davidkroell.com/tree/main/content/blogposts/2022/dont-use-tolower-to-compare-strings/src).
 There you can also find the benchmark report in CSV format.
 
 
