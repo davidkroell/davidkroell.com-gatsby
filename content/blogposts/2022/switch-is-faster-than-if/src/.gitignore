@@ -1,0 +1,5 @@
+# ignore .cs build files
+
+bin/
+obj/
+.idea/
