@@ -3,7 +3,7 @@ title: "Switch is Faster than If (in C#)"
 categories: ["programming"]
 image: "./denys-nevozhai-Zeu57mprpaI-unsplash.jpg"
 imageCredit: https://unsplash.com/photos/Zeu57mprpaI
-date: "2022-03-24"
+date: "2022-05-24"
 description: "Switch statements are faster because the switch statement is optimized before getting compiled. When there are enough cases, a tree-structure is built"
 ---
 
