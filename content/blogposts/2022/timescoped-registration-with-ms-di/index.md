@@ -1,5 +1,5 @@
 ---
-title: "A Time-Scoped Registration Mechanism for Microsoft.Extensions.DependencyInjection"
+title: "A Time-Scoped Registration Mechanism for Microsoft .Extensions.DependencyInjection"
 categories: ["programming"]
 image: "./thomas-bormans-JsTmUnHdVYQ-unsplash.jpg"
 imageCredit: https://unsplash.com/photos/JsTmUnHdVYQ
