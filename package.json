@@ -23,7 +23,7 @@
     "gatsby-remark-emojis": "^0.4.3",
     "gatsby-source-filesystem": "^2.3.11",
     "gatsby-transformer-json": "^2.8.0",
-    "gatsby-transformer-remark": "^2.8.27",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.5.5",
     "node-sass": "^7.0.0",
     "prismjs": "^1.27.0",
