@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://davidkroell.com/blog/2022/switch-is-faster-than-if/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://davidkroell.com/blog/2022/timescoped-registration-with-ms-di/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://davidkroell.com/blog/2022/dont-use-tolower-to-compare-strings/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://davidkroell.com/blog/2022/boost-async-code-in-csharp/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://davidkroell.com/blog/2021/homemade-di-the-hows-and-whys-of-dependency-injection/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://davidkroell.com/blog/2021/strategy-design-pattern-with-di/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://davidkroell.com/blog/2021/zero-to-hero-containerizing-dotnet-5-webapis/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://davidkroell.com/blog/2020/custom-mockups-for-onyx-boox-note-air/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://davidkroell.com/blog/2020/custom-screensaver-for-onyx-boox-note-air/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://davidkroell.com/blog/2020/progress-indicator-for-console-applications/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://davidkroell.com/blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://davidkroell.com/books/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://davidkroell.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+</urlset>
