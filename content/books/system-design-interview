@@ -1,0 +1,10 @@
+{
+  "readDate": 2022,
+  "title": "System Design Interview (Vol. 1)",
+  "author": "Alex Xu",
+  "imagePath": "https://m.media-amazon.com/images/P/B08CMF2CQF.01._SCLZZZZZZZ_SX500_.jpg",
+  "link": "https://www.amazon.com/System-Design-Interview-insiders-Second/dp/B08CMF2CQF",
+  "description": "The book covers various system design questions from scalability, reliability and security. It is broken up into manageable chunks and includes lots of examples from real life. It provides insider information for those getting prepared for system design interviews, but in my opinion it's also valuable if you just want to master system design.",
+  "recommendetFor": "For software engineers who want to advance in their profession.",
+  "categories": ["computerscience", "programming"]
+}
